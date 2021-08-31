@@ -1,0 +1,81 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<br></br>
+<br></br>
+
+<div class="row">
+    <div class="col" style="text-align:left">
+        <h2 style="margin:0px 0px 0px 100px">Dealer: 
+            {% if dealer_hand_value == '100' %}
+                5 Card Trick !!!
+            {% elif dealer_hand_value == '0' and player_hand_value != '0' %}
+                Bust !!!
+            {% elif dealer_hand_value == '0' and player_hand_value == '0' %}
+
+            {% else %}
+                {{ dealer_hand_value }} points
+            {% endif %}
+        </h2>
+    </div>
+    <div class="col" style="text-align:right">
+        <h2 style="margin:0px 100px 0px 0px">Player: 
+            {% if player_hand_value == '100' %}
+                5 Card Trick !!!
+            {% elif player_hand_value == '0' %}
+                Bust !!!
+            {% else %}
+                {{ player_hand_value }} points
+            {% endif %}
+        </h2>
+    </div>
+</div>
+
+<br></br>
+
+{% for d_card in dealer_hand %}
+    {% if loop.first %}
+        <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 100px"></img>
+    {% elif loop.last %}
+        <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 0px"></img>
+    {% else %}
+        <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 0px"></img>
+    {% endif %}
+{% endfor %}
+
+
+{% for p_card in player_hand %}
+    {% if loop.first %}
+        <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 100px 0px 0px"></img>
+    {% elif loop.last %}
+        <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 0px 0px 0px"></img>
+    {% else %}
+        <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 0px 0px 0px"></img>
+    {% endif %}
+    
+{% endfor %}
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+</div>
+<div>
+    
+    <form method="post" action="/" style=vertical>
+        <button type="submit" name="hit" value="hit" class="btn btn-dark btn-lg">Hit</button>
+        <button type="submit" name="stick" value="stick" class="btn btn-dark btn-lg">Stick</button>
+        <button type="submit" name="start_new_game" value="start_new_game" class="btn btn-dark btn-lg">Start New Game</button>
+    </form>
+    
+</div>
+<br></br>
+<h3 style="text-align:center"><p> {{ next_move_text }} </p></h3>
+
+{% endblock %}
+
