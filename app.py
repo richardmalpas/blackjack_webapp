@@ -9,10 +9,11 @@ app.secret_key = "sflefjdwlijqssfflcbscladcqqnzld"
 @app.route('/', methods=['GET', 'POST'])
 def main():
 
-
-    if int(session['item']) >4:  # i don't think i need the int() ?       
+    try:
+        if int(session['item']) >4:  # i don't think i need the int() ?       
+            session['item'] = 0
+    except KeyError:
         session['item'] = 0
-    
 
 
     if request.method == 'GET' or (request.method == 'POST' and int(session['item']) == 0) or (request.method == 'POST' and request.form.get('start_new_game') or (request.method == 'POST' and session['game_over'] == True)): # If we are at the start of the game, remove all data from session
@@ -145,4 +146,5 @@ def concatinate_cards(player_hand_list):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
+    #app.run(host="0.0.0.0", port="80", debug=False)
