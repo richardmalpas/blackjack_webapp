@@ -6,6 +6,7 @@
         virtualenv .build/virtualenv
         . .build/virtualenv/bin/activate
         pip3 install -r requirements.txt
+        bash setup_script.sh
     }
 )
 . "$(dirname "$BASH_SOURCE")/.build/virtualenv/bin/activate"
