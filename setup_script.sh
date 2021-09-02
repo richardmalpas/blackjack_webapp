@@ -12,9 +12,6 @@ export IP_OR_DOMAIN
 MY_USER=$(whoami)
 export MY_USER
 envsubst < setup_nginx.conf > nginx.conf
-sudo -s
-adduser $USER 'sudo'
+
 sudo apt install nginx -y
 sudo apt install supervisor -y
-exit
-echo "Success"

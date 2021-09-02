@@ -7,7 +7,7 @@ To run your own instance (master version is using Ubuntu 20.04.2 LTS)
       
       git clone https://github.com/richardmalpas/blackjack_webapp.git
 
-2).   then use the following command to setup a virtual environment and install the required dependencies:
+2).   then use the following command to setup a virtual environment, install the required dependencies and create the required config files:
       
       source ./blackjack_webapp/activate
 
