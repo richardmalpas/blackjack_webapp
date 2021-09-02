@@ -1,6 +1,7 @@
 # created by virtualenv automatically
 
+Lib
+Scripts
+pyvenv.cfg
 app_backup.py
 deck_player_backup.py
-github
-github.pub
