@@ -1,12 +1,11 @@
 # blackjack_webapp
 
-To run your own instance
+To run your own instance (master version is using Ubuntu 20.04.2 LTS)
 
 
-1).   Clone to your linux server using:
-      git clone https://github.com/richardmalpas/blackjack_webapp.git
+1).   Clone to your linux server using: 
       
-      master version is using Ubuntu 20.04.2 LTS
+      git clone https://github.com/richardmalpas/blackjack_webapp.git
 
 2).   then use the following command to setup a virtual environment and install the required dependencies:
       
