@@ -14,12 +14,8 @@ To run your own instance
 3).   then use the following command to setup a virtual environment and install the required dependencies:
       source ./activate
 
-4).   Run the following commands:
-      sudo -s
-      adduser $USER 'sudo'
-      sudo apt install nginx -y
-      sudo apt install supervisor -y
-      exit
+4).   When prompted at the terminal, enter either the servers external ip address or if available enter a valid domain address, e.g.
+      http://www.your-domain.com
 
 4).   Run the flask app.py using the command:
       sudo flask run --host=0.0.0.0 --port=80
