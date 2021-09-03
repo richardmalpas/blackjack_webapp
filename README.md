@@ -13,7 +13,7 @@ To run your own instance (master version is using Ubuntu 20.04.2 LTS)
 
 3).   When prompted at the terminal, enter either the servers external ip address or if available enter a valid domain address, e.g.
      
-      http://www.your-domain.com
+      www.your-domain.com
 
 4).   Run the flask app.py using the command:
       
