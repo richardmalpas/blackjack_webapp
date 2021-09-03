@@ -15,6 +15,5 @@ envsubst < setup_nginx.conf > nginx.conf
 sudo apt install nginx -y
 sudo apt install supervisor -y
 sudo rm /etc/nginx/sites-enabled/default
-cd ~/blackjack_webapp/
 sudo cp ~/blackjack_webapp/nginx.conf /etc/nginx/sites-enabled/blackjack_webapp
 gunicorn -w 3 app:app
