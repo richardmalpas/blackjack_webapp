@@ -13,8 +13,9 @@ MY_USER=$(whoami)
 export MY_USER
 envsubst < setup_nginx.conf > nginx.conf
 sudo apt install nginx -y
-sudo apt install supervisor -y
 sudo rm /etc/nginx/sites-enabled/default
 sudo cp ~/blackjack_webapp/nginx.conf /etc/nginx/sites-enabled/blackjack_webapp
 sudo systemctl restart nginx
+sudo apt install supervisor -y
+sudo fuser -k 8000/tcp
 gunicorn -w 3 app:app
