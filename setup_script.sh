@@ -25,3 +25,5 @@ sudo touch /var/log/blackjack_web.err.log
 sudo touch /var/log/blackjack_web.out.log
 sudo fuser -k 8000/tcp
 sudo supervisorctl reload
+clear
+echo "Installation Successful, access the game via your external IP address or from your Domain name address."
