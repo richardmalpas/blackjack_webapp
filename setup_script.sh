@@ -18,7 +18,7 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo cp ~/blackjack_webapp/nginx.conf /etc/nginx/sites-enabled/blackjack_webapp
 sudo systemctl restart nginx
 sudo apt install supervisor -y
-sudo cp ~/blackjack_webapp/setup_supervisor.conf /etc/supervisor/conf.d/blackjack_webapp.conf
+sudo cp ~/blackjack_webapp/supervisor.conf /etc/supervisor/conf.d/blackjack_webapp.conf
 sudo mkdir -p /var/log/blackjack_webapp
 sudo touch /var/log/blackjack_web.err.log
 sudo touch /var/log/blackjack_web.out.log
