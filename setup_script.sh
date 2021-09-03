@@ -7,6 +7,7 @@ else
    exit 1
 fi
 
+clear
 read -p "Enter your server IP address or your Domain address: " IP_OR_DOMAIN
 export IP_OR_DOMAIN
 MY_USER=$(whoami)
