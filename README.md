@@ -15,11 +15,8 @@ To run your own instance (master version is using Ubuntu 20.04.2 LTS)
      
       www.your-domain.com
 
-4).   Run the flask app.py using the command:
+4).   Access the game using your external IP address / domain address
       
-      sudo flask run --host=0.0.0.0 --port=80
-      
-5).   You can access the game using your servers external IP address from a browser, if you want to forward your own domain name
-      then add the servers external IP address to your domain dns A records under www and the record without a name.
+      Where using your own domain, then add the servers external IP address to your domain dns A records under www and the record without a name.
 
       I would recommend that you also setup SSH access, setup a firewall to block all incoming and outging ports except for port 22 for ssh and port 80 for the webserver, remove permit root login and also remove password authentication from /etc/ssh/sshd_config
