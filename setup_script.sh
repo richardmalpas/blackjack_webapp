@@ -16,14 +16,21 @@ envsubst < setup_nginx.conf > nginx.conf
 envsubst < setup_supervisor.conf > supervisor.conf
 sudo apt install nginx -y
 sudo rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-available/default
 sudo cp ~/blackjack_webapp/nginx.conf /etc/nginx/sites-enabled/blackjack_webapp
 sudo systemctl restart nginx
+sudo apt install snapd -y
 sudo apt install supervisor -y
 sudo cp ~/blackjack_webapp/supervisor.conf /etc/supervisor/conf.d/blackjack_webapp.conf
 sudo mkdir -p /var/log/blackjack_webapp
 sudo touch /var/log/blackjack_web.err.log
-sudo touch /var/log/blackjack_web.out.log
+sudo touch /var/log/blackjack_web.out.log   
 sudo fuser -k 8000/tcp
 sudo supervisorctl reload
+curl http://{"IP_OR_DOMAIN"}
+curl http://{"IP_OR_DOMAIN"}
+curl http://{"IP_OR_DOMAIN"}
+curl http://{"IP_OR_DOMAIN"}
+curl http://{"IP_OR_DOMAIN"}
 clear
 echo "Installation Successful, access the game via your external IP address or from your Domain name address."
