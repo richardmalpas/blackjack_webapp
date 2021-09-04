@@ -1,6 +1,6 @@
 # blackjack_webapp
 
-To run your own instance (master version is using Ubuntu 20.04.2 LTS)
+To run your own instance (master version is using Ubuntu 20.04.2 LTS)  Access my instance on: https://hartley-electricians.co.uk
 
 
 1).   Clone to your linux server using: 
