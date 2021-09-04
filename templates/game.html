@@ -37,15 +37,21 @@
 {% for d_card in dealer_hand %}
     {% if loop.first %}
         <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 100px"
+            class="thumb"
+            height="100px"
             srcset="{{ url_for('static', filename='svg/' + d_card +'.svg') }}, 216w,
                     {{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}, 0.714w"></img>
 
     {% elif loop.last %}
         <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 0px"
+            class="thumb"
+            height="100px"
             srcset="{{ url_for('static', filename='svg/' + d_card +'.svg') }}, 216w,
             {{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}, 0.714w"></img>
     {% else %}
         <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 0px"
+            class="thumb"
+            height="100px"
             srcset="{{ url_for('static', filename='svg/' + d_card +'.svg') }}, 216w,
             {{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}, 0.714w"></img>
     {% endif %}
@@ -55,16 +61,22 @@
 {% for p_card in player_hand %}
     {% if loop.first %}
         <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 100px 0px 0px"
-        srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 216w,
-        {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 0.714w"></img>
+            class="thumb"
+            height="100px"
+            srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 216w,
+            {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 0.714w"></img>
     {% elif loop.last %}
         <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 0px 0px 0px"
-        srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 216w,
-        {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 0.714w"></img>>
+            class="thumb"
+            height="100px"
+            srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 216w,
+            {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 0.714w"></img>>
     {% else %}
         <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 0px 0px 0px"
-        srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 216w,
-        {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 0.714w"></img>>
+            class="thumb"
+            height="100px"
+            srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 216w,
+            {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 0.714w"></img>>
     {% endif %}
     
 {% endfor %}
