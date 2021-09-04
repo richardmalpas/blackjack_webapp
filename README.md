@@ -13,7 +13,7 @@ To run your own instance (master version is using Ubuntu 20.04.2 LTS)  Access my
 
 3).   When prompted at the terminal, enter either the servers external ip address or if available enter a valid domain address, e.g.
      
-      www.your-domain.com
+      your-domain.com
 
 4).   Access the game using your external IP address / domain address
       
