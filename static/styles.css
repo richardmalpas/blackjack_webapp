@@ -58,7 +58,7 @@ h3 {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
   h1 {
     font-size: 1.17em;
   }
@@ -75,5 +75,25 @@ h3 {
   .clear3 {height: 28px;
   }
   .clear5 {height: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  h1 {
+    font-size: 0.585em;
+  }
+  h2 {
+    font-size: 0.5em;
+  }
+  h3 {
+    font-size: 0.415em;
+  }
+  .clear1 {height: 5px;
+  }
+  .clear2 {height: 10px;
+  }
+  .clear3 {height: 14px;
+  }
+  .clear5 {height: 20px;
   }
 }
