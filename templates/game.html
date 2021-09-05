@@ -37,21 +37,15 @@
 {% for d_card in dealer_hand %}
     {% if loop.first %}
         <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 100px"
-            class="thumb"
-            height="100px"
             srcset="{{ url_for('static', filename='svg/' + d_card +'.svg') }}, 147.4w,
                     {{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}, 68.5w"/>
 
     {% elif loop.last %}
         <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 0px"
-            class="thumb"
-            height="100px"
             srcset="{{ url_for('static', filename='svg/' + d_card +'.svg') }}, 147.4w,
                     {{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}, 68.5w"/>
     {% else %}
         <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}" align="left" style="margin:0px 0px 0px 0px"
-            class="thumb"
-            height="100px"
             srcset="{{ url_for('static', filename='svg/' + d_card +'.svg') }}, 147.4w,
                     {{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}, 68.5w"/>
     {% endif %}
@@ -61,20 +55,14 @@
 {% for p_card in player_hand %}
     {% if loop.first %}
         <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 100px 0px 0px"
-            class="thumb"
-            height="100px"
             srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 147.4w,
                     {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 68.5w"/>
     {% elif loop.last %}
         <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 0px 0px 0px"
-            class="thumb"
-            height="100px"
             srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 147.4w,
                     {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 68.5w"/>
     {% else %}
         <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}" align="right" style="margin:0px 0px 0px 0px"
-            class="thumb"
-            height="100px"
             srcset="{{ url_for('static', filename='svg/' + p_card +'.svg') }}, 147.4w,
                     {{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}, 68.5w"/>
     {% endif %}
