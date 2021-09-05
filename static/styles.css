@@ -3,9 +3,9 @@
   overflow-x: hidden;
   height: 100vh;
   opacity: 0.85;
-  
 
 }
+
 
 h1 {
   color: white;
@@ -21,4 +21,29 @@ h2 {
 h3 {
   color: white;
   text-shadow: 2px 2px 5px black;
+}
+
+@media only screen and (min-width: 601px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.7em;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.17em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 0.83em;
+  }
 }
