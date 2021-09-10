@@ -50,14 +50,27 @@
            
     <div class="item4_player_cards">
     
-        {% for p_card in player_hand %}
+        {% for p_card in player_hand|reverse %}
         <picture>
             <source media="(orientation: landscape) and (max-width: 900px)" srcset="{{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}"> 
+            <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}">
+        </picture> 
+        {% endfor %}
+    </div>
+
+                
+    <div class="item4_player_cards_portrait">
+    
+        {% for p_card in player_hand %}
+        <picture>
             <source media="(orientation: portrait) and (max-width: 700px)" srcset="{{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}"> 
             <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}">
         </picture> 
         {% endfor %}
     </div>
+
+
+
 
         
     <div class="item5_buttons">
@@ -107,10 +120,11 @@
     
     <div class="item7_github_link">
         <a href="https://github.com/richardmalpas/blackjack_webapp">
-            <img src="{{ url_for('static', filename='png/GitHub-Mark-64px.png') }}" style="max-width:100%"></img>
+            <picture>
+                <source media="(orientation: landscape) and (max-width: 900px)" srcset="{{ url_for('static', filename='png/GitHub-Mark-32px.png') }}"> 
+                <img src="{{ url_for('static', filename='png/GitHub-Mark-64px.png') }}" style="max-width:100%">
+            </picture>
         </a>
-    
-    </div>
-    
+    </div>   
 </div>
     {% endblock %}
