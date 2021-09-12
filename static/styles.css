@@ -1,4 +1,5 @@
 .wrapper{background: url('/static/blackjack_background.jpg') no-repeat center center fixed;
+  background-size: cover;
   overflow-y: hidden;
   overflow-x: hidden;
   height: 100vh;
@@ -88,9 +89,10 @@
 
 
 .item7_github_link {
+  justify-self: end;
   grid-row-start: 4;
   grid-row-end: 4;
-  grid-column-start: 12;
+  grid-column-start: 11;
   grid-column-end: 12;
 }
 
@@ -185,7 +187,7 @@ h3 {
   
 
   .grid-container { 
-    grid-row-gap: 10px;
+    grid-row-gap: 5px;
   }
   .item1_dealer_text{
     height: 0px;
@@ -258,7 +260,7 @@ h3 {
   }
   .clear1 {height: 15px;
   }
-  .clear2 {height: 30px;
+  .clear2 {height: 20px;
   }
   .clear3 {height: 40px;
   }
@@ -270,7 +272,7 @@ h3 {
   }
 
   .grid-container { 
-    grid-row-gap: 25px;
+    grid-row-gap: 10px;
 
   }
 
@@ -303,7 +305,7 @@ h3 {
   
   .item4_player_cards {
     justify-self: end;
-    height: 40px;
+    height: 100px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 12;
