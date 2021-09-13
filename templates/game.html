@@ -1,12 +1,12 @@
 {% extends 'home.html' %}
 
 {% block content %}
-<div class="clear2"></div>
+<div class="clear1"></div>
 
 <div class="grid-container">
     <div class="item1_dealer_text">
-        
-        <h2>Dealer: 
+        <h2>
+            Dealer: 
         
             {% if dealer_hand_value == '100' %}
                 5 Card Trick !!!
@@ -17,11 +17,11 @@
             {% else %}
                 {{ dealer_hand_value }} points
             {% endif %}
-
         </h2>
     </div>
     <div class="item2_player_text">
-        <h2>Player: 
+        <h2>
+            Player: 
             {% if player_hand_value == '100' %}
                 5 Card Trick !!!
             {% elif player_hand_value == '0' %}
@@ -30,14 +30,8 @@
                 {{ player_hand_value }} points
             {% endif %}
         </h2>
-    
     </div>
-
-    <div class="clear3"></div>
-
-
-    <div class="item3_dealer_cards">
-        
+    <div class="item3_dealer_cards">        
         {% for d_card in dealer_hand %}
         <picture>
             <source media="(orientation: landscape) and (max-width: 900px)" srcset="{{ url_for('static', filename='svg/small/' + d_card +'-small.svg') }}"> 
@@ -45,22 +39,16 @@
             <img src="{{ url_for('static', filename='svg/' + d_card +'.svg') }}">
         </picture>
         {% endfor %}
-    </div>
-        
-           
+    </div>        
     <div class="item4_player_cards">
-    
         {% for p_card in player_hand|reverse %}
         <picture>
             <source media="(orientation: landscape) and (max-width: 900px)" srcset="{{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}"> 
             <img src="{{ url_for('static', filename='svg/' + p_card +'.svg') }}">
         </picture> 
         {% endfor %}
-    </div>
-
-                
+    </div>            
     <div class="item4_player_cards_portrait">
-    
         {% for p_card in player_hand %}
         <picture>
             <source media="(orientation: portrait) and (max-width: 700px)" srcset="{{ url_for('static', filename='svg/small/' + p_card +'-small.svg') }}"> 
@@ -68,11 +56,6 @@
         </picture> 
         {% endfor %}
     </div>
-
-
-
-
-        
     <div class="item5_buttons">
     
         
