@@ -14,7 +14,6 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-
   grid-row-gap: 20px;
   justify-items: center;
 }
@@ -23,7 +22,7 @@
 
 .item1_dealer_text {
   justify-self: start;
-  height: 100px;
+  height: 50px;
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 2;
@@ -32,7 +31,7 @@
 
 .item2_player_text {
   justify-self: end;
-  height: 100px;
+  height: 50px;
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 12;
@@ -51,7 +50,7 @@
 .item4_player_cards {
   visibility: visible;
   justify-self: end;
-  height: 250px;
+  height: 100px;
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 12;
@@ -66,10 +65,11 @@
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 13;
+
 }
 
 .item5_buttons {
-  height: 120px;
+  height: 100px;
   grid-row-start: 3;
   grid-row-end: 3;
   grid-column-start: 1;
@@ -85,6 +85,7 @@
 
 
 .item7_github_link {
+  visibility: visible;
   justify-self: end;
   grid-row-start: 4;
   grid-row-end: 4;
@@ -93,6 +94,13 @@
 }
 
 
+.item7_github_link_portrait {
+  visibility: hidden;
+  grid-row-start: 6;
+  grid-row-end: 6;
+  grid-column-start: 10;
+  grid-column-end: 10;
+}
 
 
 
@@ -137,7 +145,7 @@ h3 {
 
 
 
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 901px) {
   h1 {
     font-size: 2.5em;
   }
@@ -154,6 +162,23 @@ h3 {
   .clear3 {height: 80px;
   }
   .clear5 {height: 120px;
+  }
+
+  .item1_dealer_text {
+    height: 80px
+  }
+  
+  .item2_player_text {
+    height: 80px;
+  }
+  
+  
+  .item3_dealer_cards {
+    height: 300px
+  }
+  
+  .item4_player_cards {
+    height: 300px;
   }
 }
 
@@ -187,13 +212,17 @@ h3 {
     grid-row-gap: 5px;
   }
   .item1_dealer_text{
-    height: 50px;
+    height: 30px;
 
   } 
+
+  .item3_dealer_cards {
+    height: 120px
+  }
+
   .item2_player_text {
-    
     justify-self: start;
-    height: 50px;
+    height: 30px;
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -202,7 +231,7 @@ h3 {
 
   .item4_player_cards {
     visibility: hidden;
-    height: 150px;
+    height: 0px;
   }
 
   .item4_player_cards_portrait {
@@ -225,7 +254,6 @@ h3 {
   }
   
   .item6_next_move_text {
-    
     grid-row-start: 6;
     grid-row-end: 6;
     grid-column-start: 5;
@@ -234,7 +262,15 @@ h3 {
   
   
   .item7_github_link {
-    
+    visibility: hidden;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 10;
+    grid-column-end: 10;
+  }
+
+  .item7_github_link_portrait {
+    visibility: visible;
     grid-row-start: 6;
     grid-row-end: 6;
     grid-column-start: 10;
@@ -268,7 +304,7 @@ h3 {
   }
 
   .grid-container { 
-    grid-row-gap: 0px;
+    grid-row-gap: 5px;
     
     
   }
@@ -276,6 +312,7 @@ h3 {
 
   .item1_dealer_text {
     justify-self: start;
+    height: 50px;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
@@ -284,7 +321,7 @@ h3 {
   
   .item2_player_text {
     justify-self: end;
-    height: 0px;
+    height: 50px;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 12;
@@ -294,6 +331,7 @@ h3 {
   
   .item3_dealer_cards {
     justify-self: start;
+    height: 110px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 13;
@@ -302,7 +340,7 @@ h3 {
   
   .item4_player_cards {
     justify-self: end;
-    height: 120px;
+    height: 110px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 12;
