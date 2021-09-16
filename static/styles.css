@@ -312,7 +312,7 @@ h3 {
 
   .item1_dealer_text {
     justify-self: start;
-    height: 25px;
+    height: 30px;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
@@ -321,7 +321,7 @@ h3 {
   
   .item2_player_text {
     justify-self: end;
-    height: 25px;
+    height: 30px;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 12;
@@ -331,7 +331,7 @@ h3 {
   
   .item3_dealer_cards {
     justify-self: start;
-    height: 90px;
+    height: 95px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 13;
@@ -340,7 +340,7 @@ h3 {
   
   .item4_player_cards {
     justify-self: end;
-    height: 90px;
+    height: 95px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 12;
@@ -349,7 +349,7 @@ h3 {
   
   
   .item5_buttons {
-    height: 35px;
+    height: 40px;
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 1;
