@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Automated_Installation
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  #pull_request:
+    #branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04.2
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      # - name: Run a one-line script
+      #  run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          source ./blackjack_webapp/activate_gh_action
+          pip3 install -r requirements.txt
+          IP_OR_DOMAIN="hartley-electricians.co.uk"
+          export IP_OR_DOMAIN
+          MY_USER=$(whoami)
+          export MY_USER
+          envsubst < setup_nginx.conf > nginx.conf
+          envsubst < setup_supervisor.conf > supervisor.conf
+          sudo apt install nginx -y
+          sudo rm /etc/nginx/sites-enabled/default
+          sudo rm /etc/nginx/sites-available/default
+          sudo cp ~/blackjack_webapp/nginx.conf /etc/nginx/sites-enabled/blackjack_webapp
+          sudo systemctl restart nginx
+          sudo apt install snapd -y
+          sudo apt install supervisor -y
+          sudo cp ~/blackjack_webapp/supervisor.conf /etc/supervisor/conf.d/blackjack_webapp.conf
+          sudo mkdir -p /var/log/blackjack_webapp
+          sudo touch /var/log/blackjack_web.err.log
+          sudo touch /var/log/blackjack_web.out.log   
+          sudo fuser -k 8000/tcp
+          sudo supervisorctl reload
+          clear
+          echo "Installation Successful, access the game via your external IP address or from your Domain name address."
