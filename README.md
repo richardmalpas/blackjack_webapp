@@ -23,7 +23,7 @@ To run your own instance (master version is using Ubuntu 20.04.2 LTS)  Access my
 
 5).   Uninstall by using the following command:
 
-      bash uninstall_script.sh
+      ~/blackjack_webapp/uninstall_script.sh
 
 
 Rules:
